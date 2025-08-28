@@ -130,9 +130,8 @@ const Services = () => {
                           : service.title === 'Automatiseringen & Software'
                           ? 'object-contain bg-white p-4'
                           : 'object-cover'
-                      } rounded-lg shadow-corporate group-hover:shadow-primary transition-all duration-300`}
+                      } rounded-lg shadow-corporate`}
                     />
-                    <div className="absolute inset-0 bg-gradient-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </div>
                 

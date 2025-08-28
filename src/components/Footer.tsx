@@ -7,11 +7,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-sm"></div>
-              <span className="text-xl font-bold">
-                Juko <span className="text-primary">Automation</span>
-              </span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/jukoautomation.PNG" 
+                alt="Juko Automation" 
+                className="h-20 w-auto filter invert"
+              />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Expert in softwareontwikkeling, automatiseringen, no-code tools en AI implementatie 

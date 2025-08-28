@@ -19,13 +19,14 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-sm"></div>
-            <span className="text-xl font-bold text-foreground">
-              Juko <span className="text-primary">Automation</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/jukoautomation.PNG" 
+              alt="Juko Automation" 
+              className="h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
