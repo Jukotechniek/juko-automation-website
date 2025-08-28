@@ -44,15 +44,14 @@ const Services = () => {
       image: automationImage,
       features: [
         "Web applicaties",
-        "Proces automatisering",
-        "Proces optimalisatie",
+        "Processen stroomlijnen",
         "Software koppelingen",
         "Data inzichtelijk maken",
         "Rapportage automatisering"
       ],
       technologies: [
-        { icon: Globe, name: "Web Development" },
-        { icon: Workflow, name: "Process Automation" },
+        { icon: Globe, name: "Webapp ontwikkeling" },
+        { icon: Workflow, name: "Proces automatisering" },
       ]
     },
     {

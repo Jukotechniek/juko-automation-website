@@ -5,6 +5,7 @@ import { ArrowRight, Code, Cog, Zap, Brain } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import automationImage from "@/assets/automation.jpg";
 import noCodeImage from "@/assets/no-code-tools.jpg";
+import jukoBotImage from "@/assets/JukoBot.png";
 
 const Home = () => {
   const services = [
@@ -26,7 +27,7 @@ const Home = () => {
       icon: Brain,
       title: "AI Implementatie",
       description: "Transformeer uw bedrijf met chatbots, predictive analytics en document processing.",
-      image: noCodeImage,
+      image: jukoBotImage,
       link: "/diensten#ai-implementatie"
     },
   ];
@@ -95,9 +96,15 @@ const Home = () => {
                       <img 
                         src={service.image} 
                         alt={service.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                        className={`w-full h-48 transition-transform duration-300 group-hover:scale-110 ${
+                          service.title === 'AI Implementatie' 
+                            ? 'object-contain bg-gray-50 p-2' 
+                            : service.title === 'Automatiseringen & Software'
+                            ? 'object-contain bg-white p-2'
+                            : 'object-cover'
+                        }`}
                       />
-                      <div className="absolute inset-0 bg-gradient-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-gray-900/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <service.icon className="w-12 h-12 text-white" />
                       </div>
                     </div>
