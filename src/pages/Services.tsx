@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import automationImage from "@/assets/automation.jpg";
 import noCodeImage from "@/assets/no-code-tools.jpg";
+import jukoBotImage from "@/assets/JukoBot.png";
 import n8nLogo from "@/assets/n8n-logo.png";
 import makeLogo from "@/assets/make-logo.png";
 
@@ -25,12 +26,9 @@ const Services = () => {
   useEffect(() => {
     // Handle hash navigation when component mounts
     const hash = window.location.hash;
-    console.log('Current hash:', hash);
     if (hash) {
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
-        console.log('Looking for element with ID:', hash.substring(1));
-        console.log('Element found:', element);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -47,9 +45,9 @@ const Services = () => {
       features: [
         "Web applicaties",
         "Proces automatisering",
-        "Workflow optimalisatie",
-        "API ontwikkeling",
-        "Data integratie",
+        "Proces optimalisatie",
+        "Software koppelingen",
+        "Data inzichtelijk maken",
         "Rapportage automatisering"
       ],
       technologies: [
@@ -75,19 +73,38 @@ const Services = () => {
         { icon: null, name: "Make.com", logo: makeLogo },
         { icon: Globe, name: "Rapid Development" },
       ]
+    },
+    {
+      icon: Brain,
+      title: "AI Implementatie",
+      description: "Transformeer uw bedrijf met de kracht van kunstmatige intelligentie",
+      image: jukoBotImage,
+      features: [
+        "Chatbots & Virtuele assistenten",
+        "Voorspellende analytics", 
+        "Document verwerking",
+        "Verhoogde efficiëntie",
+        "24/7 beschikbaarheid",
+        "Personeel ontlasten"
+      ],
+      technologies: [
+        { icon: Bot, name: "AI Chatbots" },
+        { icon: Brain, name: "Machine Learning" },
+        { icon: Database, name: "Data Analytics" },
+      ]
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-12 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Onze <span className="text-primary">Diensten</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-600">
               Ontdek hoe wij uw bedrijf kunnen helpen groeien met innovatieve 
               technologische oplossingen en slimme automatiseringen.
             </p>
@@ -102,7 +119,7 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <div 
                 key={index} 
-                id={index === 0 ? 'automatiseringen-software' : 'no-code-tools'}
+                id={index === 0 ? 'automatiseringen-software' : index === 1 ? 'no-code-tools' : 'ai-implementatie'}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
               >
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
@@ -110,7 +127,7 @@ const Services = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-80 object-cover rounded-lg shadow-corporate group-hover:shadow-primary transition-all duration-300"
+                      className={`w-full h-80 ${service.title === 'AI Implementatie' ? 'object-contain bg-gray-50' : 'object-cover'} rounded-lg shadow-corporate group-hover:shadow-primary transition-all duration-300`}
                     />
                     <div className="absolute inset-0 bg-gradient-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
@@ -166,70 +183,6 @@ const Services = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* AI Integration Section */}
-      <section id="ai-implementatie" className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto bg-card border-0 shadow-corporate">
-            <CardHeader className="text-center pb-8">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <CardTitle className="text-4xl font-bold mb-4">
-                AI <span className="text-primary">Implementatie</span>
-              </CardTitle>
-              <p className="text-xl text-muted-foreground">
-                Transformeer uw bedrijf met de kracht van kunstmatige intelligentie
-              </p>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">AI Oplossingen:</h3>
-                  <div className="space-y-3">
-                    {[
-                      "Chatbots & Virtual Assistants",
-                      "Predictive Analytics",
-                      "Document Processing"
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-primary mr-3" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Voordelen:</h3>
-                  <div className="space-y-3">
-                    {[
-                      "Verhoogde efficiëntie",
-                      "Kostenbesparing",
-                      "Betere besluitvorming",
-                      "24/7 beschikbaarheid",
-                      "Schaalbaarheid",
-                      "Concurrentievoordeel"
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-primary mr-3" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="text-center mt-8">
-                <Button variant="corporate" size="lg" asChild>
-                  <Link to="/contact">
-                    Ontdek AI Mogelijkheden
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
