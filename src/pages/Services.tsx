@@ -47,10 +47,11 @@ const Services = () => {
         "Processen stroomlijnen",
         "Software koppelingen",
         "Data inzichtelijk maken",
+        "Maatwerk bedrijfsapps",
         "Rapportage automatisering"
       ],
       technologies: [
-        { icon: Globe, name: "Webapp ontwikkeling" },
+        { icon: Code, name: "Webapp ontwikkeling" },
         { icon: Workflow, name: "Proces automatisering" },
       ]
     },
@@ -60,17 +61,15 @@ const Services = () => {
       description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make voor directe resultaten zonder complexe programmering.",
       image: noCodeImage,
       features: [
-        "n8n automatiseringen",
+        "n8n-automatiseringen",
         "Make.com workflows",
-        "Snelle prototyping",
-        "Business apps",
-        "Dashboard creatie",
-        "Workflow tools"
+        "Snelle implementatie",
+        "Innovatieve dashboards",
+        "Zelf beheren of volledig door ons verzorgd"
       ],
       technologies: [
         { icon: null, name: "n8n Platform", logo: n8nLogo },
         { icon: null, name: "make.com", logo: makeLogo },
-                  { icon: Zap, name: "Snelle Ontwikkeling" },
       ]
     },
     {
@@ -88,8 +87,7 @@ const Services = () => {
       ],
       technologies: [
         { icon: Bot, name: "AI Chatbots" },
-        { icon: Brain, name: "Machine Learning" },
-        { icon: Database, name: "Data Analytics" },
+        { icon: Database, name: "Data Analyse" },
       ]
     }
   ];
