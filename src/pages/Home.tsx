@@ -13,18 +13,21 @@ const Home = () => {
       title: "Automatiseringen & Software",
       description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties.",
       image: automationImage,
+      link: "/diensten#automatiseringen-software"
     },
     {
       icon: Zap,
       title: "No-Code Tools",
       description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make zonder complexe programmering.",
       image: noCodeImage,
+      link: "/diensten#no-code-tools"
     },
     {
       icon: Brain,
       title: "AI Implementatie",
       description: "Transformeer uw bedrijf met chatbots, predictive analytics en document processing.",
       image: noCodeImage,
+      link: "/diensten#ai-implementatie"
     },
   ];
 
@@ -55,7 +58,7 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200" asChild>
                 <Link to="/contact">
                   Neem Contact Op
                 </Link>
@@ -85,26 +88,28 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-primary transition-all duration-300 transform hover:-translate-y-2 bg-card border-0 shadow-corporate">
-                <CardContent className="p-8">
-                  <div className="mb-6 relative overflow-hidden rounded-lg">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <service.icon className="w-12 h-12 text-white" />
+              <Link key={index} to={service.link} className="block">
+                <Card className="group hover:shadow-primary transition-all duration-300 transform hover:-translate-y-2 bg-card border-0 shadow-corporate cursor-pointer">
+                  <CardContent className="p-8">
+                    <div className="mb-6 relative overflow-hidden rounded-lg">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <service.icon className="w-12 h-12 text-white" />
+                      </div>
                     </div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { 
   Code, 
   Cog, 
@@ -21,6 +22,22 @@ import n8nLogo from "@/assets/n8n-logo.png";
 import makeLogo from "@/assets/make-logo.png";
 
 const Services = () => {
+  useEffect(() => {
+    // Handle hash navigation when component mounts
+    const hash = window.location.hash;
+    console.log('Current hash:', hash);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        console.log('Looking for element with ID:', hash.substring(1));
+        console.log('Element found:', element);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
+
   const mainServices = [
     {
       icon: Cog,
@@ -83,7 +100,11 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {mainServices.map((service, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+              <div 
+                key={index} 
+                id={index === 0 ? 'automatiseringen-software' : 'no-code-tools'}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
+              >
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="relative group">
                     <img 
@@ -149,7 +170,7 @@ const Services = () => {
       </section>
 
       {/* AI Integration Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section id="ai-implementatie" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <Card className="max-w-4xl mx-auto bg-card border-0 shadow-corporate">
             <CardHeader className="text-center pb-8">

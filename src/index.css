@@ -5,6 +5,11 @@
 /* Juko Automation Design System - Corporate, Professional, Innovative */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Offset for fixed navigation */
+  }
+  
   :root {
     /* Juko Brand Colors */
     --background: 0 0% 100%;
