@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import automationImage from "@/assets/automation.jpg";
 import noCodeImage from "@/assets/no-code-tools.jpg";
+import n8nLogo from "@/assets/n8n-logo.png";
+import makeLogo from "@/assets/make-logo.png";
 
 const Services = () => {
   const mainServices = [
@@ -36,7 +38,6 @@ const Services = () => {
       technologies: [
         { icon: Globe, name: "Web Development" },
         { icon: Workflow, name: "Process Automation" },
-        { icon: Database, name: "Database Design" },
       ]
     },
     {
@@ -53,8 +54,8 @@ const Services = () => {
         "Workflow tools"
       ],
       technologies: [
-        { icon: Zap, name: "n8n Platform" },
-        { icon: Puzzle, name: "Make.com" },
+        { icon: null, name: "n8n Platform", logo: n8nLogo },
+        { icon: null, name: "Make.com", logo: makeLogo },
         { icon: Globe, name: "Rapid Development" },
       ]
     }
@@ -123,7 +124,11 @@ const Services = () => {
                     <div className="flex flex-wrap gap-4">
                       {service.technologies.map((tech, idx) => (
                         <div key={idx} className="flex items-center bg-muted rounded-lg px-4 py-2">
-                          <tech.icon className="w-5 h-5 text-primary mr-2" />
+                          {tech.logo ? (
+                            <img src={tech.logo} alt={tech.name} className="w-5 h-5 mr-2" />
+                          ) : (
+                            <tech.icon className="w-5 h-5 text-primary mr-2" />
+                          )}
                           <span className="text-sm font-medium">{tech.name}</span>
                         </div>
                       ))}

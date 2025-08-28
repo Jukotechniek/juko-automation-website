@@ -3,28 +3,27 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Cog, Zap, Brain } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-import softwareImage from "@/assets/software-development.jpg";
 import automationImage from "@/assets/automation.jpg";
-import noCodeImage from "@/assets/no-code.jpg";
+import noCodeImage from "@/assets/no-code-tools.jpg";
 
 const Home = () => {
   const services = [
     {
-      icon: Code,
-      title: "Softwareontwikkeling",
-      description: "Maatwerk software oplossingen die perfect aansluiten bij uw bedrijfsprocessen.",
-      image: softwareImage,
-    },
-    {
       icon: Cog,
-      title: "Automatiseringen",
-      description: "Stroomlijn uw workflows en verhoog de efficiëntie met slimme automatiseringen.",
+      title: "Automatiseringen & Software",
+      description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties.",
       image: automationImage,
     },
     {
       icon: Zap,
       title: "No-Code Tools",
-      description: "Snelle implementatie van zakelijke oplossingen zonder complexe ontwikkeling.",
+      description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make zonder complexe programmering.",
+      image: noCodeImage,
+    },
+    {
+      icon: Brain,
+      title: "AI Implementatie",
+      description: "Transformeer uw bedrijf met chatbots, predictive analytics en document processing.",
       image: noCodeImage,
     },
   ];
@@ -46,8 +45,8 @@ const Home = () => {
               voor Uw Bedrijf
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
-              Verhoog uw bedrijfsefficiëntie met onze expertise in softwareontwikkeling, 
-              automatiseringen en AI implementatie.
+              Verhoog uw bedrijfsefficiëntie met onze expertise in automatiseringen, 
+              no-code tools en AI implementatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
@@ -56,7 +55,7 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-foreground" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black" asChild>
                 <Link to="/contact">
                   Neem Contact Op
                 </Link>
@@ -79,7 +78,7 @@ const Home = () => {
               Onze <span className="text-primary">Expertise</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Van maatwerk softwareontwikkeling tot geavanceerde AI implementatie - 
+              Van automatiseringen tot geavanceerde AI implementatie - 
               wij helpen uw bedrijf groeien met de juiste technologische oplossingen.
             </p>
           </div>
