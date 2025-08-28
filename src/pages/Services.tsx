@@ -70,8 +70,8 @@ const Services = () => {
       ],
       technologies: [
         { icon: null, name: "n8n Platform", logo: n8nLogo },
-        { icon: null, name: "Make.com", logo: makeLogo },
-        { icon: Globe, name: "Rapid Development" },
+        { icon: null, name: "make.com", logo: makeLogo },
+                  { icon: Zap, name: "Snelle Ontwikkeling" },
       ]
     },
     {
@@ -127,7 +127,13 @@ const Services = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className={`w-full h-80 ${service.title === 'AI Implementatie' ? 'object-contain bg-gray-50' : 'object-cover'} rounded-lg shadow-corporate group-hover:shadow-primary transition-all duration-300`}
+                      className={`w-full h-96 ${
+                        service.title === 'AI Implementatie' 
+                          ? 'object-contain bg-gray-50' 
+                          : service.title === 'Automatiseringen & Software'
+                          ? 'object-contain bg-white p-4'
+                          : 'object-cover'
+                      } rounded-lg shadow-corporate group-hover:shadow-primary transition-all duration-300`}
                     />
                     <div className="absolute inset-0 bg-gradient-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
@@ -163,7 +169,7 @@ const Services = () => {
                       {service.technologies.map((tech, idx) => (
                         <div key={idx} className="flex items-center bg-muted rounded-lg px-4 py-2">
                           {tech.logo ? (
-                            <img src={tech.logo} alt={tech.name} className="w-5 h-5 mr-2" />
+                            <img src={tech.logo} alt={tech.name} className="w-7 h-7 mr-2" />
                           ) : (
                             <tech.icon className="w-5 h-5 text-primary mr-2" />
                           )}
