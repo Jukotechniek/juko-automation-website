@@ -15,67 +15,47 @@ import {
   Bot,
   Puzzle
 } from "lucide-react";
-import softwareImage from "@/assets/software-development.jpg";
 import automationImage from "@/assets/automation.jpg";
-import noCodeImage from "@/assets/no-code.jpg";
+import noCodeImage from "@/assets/no-code-tools.jpg";
 
 const Services = () => {
   const mainServices = [
     {
-      icon: Code,
-      title: "Softwareontwikkeling",
-      description: "Maatwerk software oplossingen die perfect aansluiten bij uw bedrijfsprocessen en doelstellingen.",
-      image: softwareImage,
+      icon: Cog,
+      title: "Automatiseringen & Software",
+      description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties die tijd en kosten besparen.",
+      image: automationImage,
       features: [
         "Web applicaties",
-        "Mobile apps", 
+        "Proces automatisering",
+        "Workflow optimalisatie",
         "API ontwikkeling",
-        "Database ontwerp",
-        "Cloud migratie",
-        "Legacy modernisering"
+        "Data integratie",
+        "Rapportage automatisering"
       ],
       technologies: [
         { icon: Globe, name: "Web Development" },
-        { icon: Smartphone, name: "Mobile Apps" },
-        { icon: Database, name: "Database Design" },
-      ]
-    },
-    {
-      icon: Cog,
-      title: "Automatiseringen",
-      description: "Stroomlijn uw workflows en verhoog de efficiëntie met slimme automatiseringen die tijd en kosten besparen.",
-      image: automationImage,
-      features: [
-        "Proces automatisering",
-        "Workflow optimalisatie",
-        "Data integratie",
-        "Rapportage automatisering",
-        "Email automatisering",
-        "Document verwerking"
-      ],
-      technologies: [
         { icon: Workflow, name: "Process Automation" },
-        { icon: Bot, name: "RPA Solutions" },
-        { icon: Cog, name: "System Integration" },
+        { icon: Database, name: "Database Design" },
       ]
     },
     {
       icon: Zap,
       title: "No-Code Tools",
-      description: "Snelle implementatie van zakelijke oplossingen zonder complexe ontwikkeling, voor directe resultaten.",
+      description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make voor directe resultaten zonder complexe programmering.",
       image: noCodeImage,
       features: [
-        "No-code platforms",
+        "n8n automatiseringen",
+        "Make.com workflows",
         "Snelle prototyping",
         "Business apps",
         "Dashboard creatie",
-        "Form builders",
         "Workflow tools"
       ],
       technologies: [
-        { icon: Zap, name: "Rapid Development" },
-        { icon: Puzzle, name: "Platform Integration" },
-        { icon: Globe, name: "Web Solutions" },
+        { icon: Zap, name: "n8n Platform" },
+        { icon: Puzzle, name: "Make.com" },
+        { icon: Globe, name: "Rapid Development" },
       ]
     }
   ];
@@ -186,10 +166,7 @@ const Services = () => {
                     {[
                       "Chatbots & Virtual Assistants",
                       "Predictive Analytics",
-                      "Document Processing",
-                      "Image Recognition",
-                      "Natural Language Processing",
-                      "Machine Learning Models"
+                      "Document Processing"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-primary mr-3" />
