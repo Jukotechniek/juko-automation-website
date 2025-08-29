@@ -68,7 +68,7 @@ const Services = () => {
         "Zelf beheren of volledig door ons verzorgd"
       ],
       technologies: [
-        { icon: null, name: "n8n Platform", logo: n8nLogo },
+        { icon: null, name: "n8n", logo: n8nLogo },
         { icon: null, name: "make.com", logo: makeLogo },
       ]
     },
