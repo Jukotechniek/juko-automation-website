@@ -131,6 +131,66 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Werkwijze Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                Onze <span className="text-primary">Werkwijze</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Een persoonlijke aanpak waarbij we samen uw processen doorlopen en op maat gemaakte automatiseringsvoorstellen ontwikkelen.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Stap 1 */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Kennismaking</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We komen bij u op locatie of plannen een videocall om uw bedrijf en uitdagingen te leren kennen.
+                </p>
+              </div>
+
+              {/* Stap 2 */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Proces Analyse</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Samen nemen we alle processen van uw bedrijf door en identificeren we kansen voor automatisering.
+                </p>
+              </div>
+
+              {/* Stap 3 */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Voorstel op Maat</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We presenteren u een concreet automatiseringsvoorstel met heldere voordelen en implementatiestappen.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
+                <Link to="/contact">
+                  Plan een Kennismaking
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-b from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
