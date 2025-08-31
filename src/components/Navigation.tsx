@@ -25,7 +25,7 @@ const Navigation = () => {
             <img 
               src="/jukoautomation.PNG" 
               alt="Juko Automation" 
-              className="h-20 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 

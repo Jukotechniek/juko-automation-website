@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src="/jukoautomation.PNG" 
                 alt="Juko Automation" 
-                className="h-20 w-auto filter invert"
+                className="h-20 w-auto logo-footer"
               />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
