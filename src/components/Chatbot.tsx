@@ -53,7 +53,7 @@ const Chatbot = () => {
       {/* Chat Toggle Button - exact zoals origineel */}
       <button
         onClick={openChat}
-        className={`fixed bottom-5 right-5 z-[1099] w-14 h-14 text-2xl border-none rounded-full cursor-pointer shadow-[0_4px_12px_rgba(0,0,0,0.2)] ${
+        className={`fixed bottom-4 right-5 z-[1099] w-14 h-14 text-2xl border-none rounded-full cursor-pointer shadow-[0_4px_12px_rgba(0,0,0,0.2)] ${
           isOpen ? "hidden" : "flex"
         } items-center justify-center text-white`}
         style={{ background: "#20c997" }}
@@ -73,7 +73,7 @@ const Chatbot = () => {
 
       {/* Chatbot - exact zoals origineel */}
       {isOpen && (
-        <div className="fixed bottom-[100px] right-5 z-[1100] flex flex-col items-start">
+        <div className="fixed bottom-20 right-5 z-[1100] flex flex-col items-start">
           <div className="relative">
             {/* Close button - exact zoals origineel */}
             <button
@@ -90,14 +90,14 @@ const Chatbot = () => {
               style={{ maxWidth: "360px" }}
             >
               <img
-                src="/jukoautomation.PNG"
+                src="/justin.png"
                 alt="Justin"
                 className="w-12 h-12 rounded-full object-cover"
               />
               <div>
                 <div className="text-base font-semibold text-black">Justin</div>
                 <div className="text-sm text-black block mt-1 leading-[1.4]">
-                  van Juko Automation
+                  van <span className="font-semibold">Juko Automation</span>
                 </div>
                 <div className="text-sm text-black block mt-1 leading-[1.4]">
                   {getGreeting()}
@@ -118,8 +118,14 @@ const Chatbot = () => {
               
               <button
                 onClick={handleWhatsApp}
-                className="border-none rounded-[999px] py-[14px] px-[26px] font-medium text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-[0.2s] text-center whitespace-nowrap w-full text-white hover:bg-[#1aa179]"
+                className="border-none rounded-[999px] py-[14px] px-[26px] font-medium text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-all duration-200 text-center whitespace-nowrap w-full text-white"
                 style={{ background: "#20c997" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#1aa179";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#20c997";
+                }}
               >
                 WhatsApp
               </button>
