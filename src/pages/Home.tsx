@@ -163,7 +163,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Proces Analyse</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Samen nemen we alle processen van uw bedrijf door en identificeren we kansen voor automatisering.
+                  Samen nemen we de relevante processen van uw bedrijf door en identificeren we kansen voor automatisering.
                 </p>
               </div>
 

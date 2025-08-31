@@ -239,22 +239,39 @@ const Contact = () => {
                 </p>
               </div>
 
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="bg-card border-0 shadow-corporate hover:shadow-primary transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
-                        <p className="text-primary font-medium mb-1">{info.content}</p>
-                        <p className="text-sm text-muted-foreground">{info.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              {contactInfo.map((info, index) => {
+                const getHref = () => {
+                  if (info.title === "Email") return `mailto:${info.content}`;
+                  if (info.title === "Telefoon") return `tel:${info.content.replace(/\s/g, '')}`;
+                  return null;
+                };
+
+                const href = getHref();
+                const CardComponent = href ? 'a' : 'div';
+
+                return (
+                  <CardComponent 
+                    key={index} 
+                    href={href || undefined}
+                    className={`block ${href ? 'cursor-pointer' : ''}`}
+                  >
+                    <Card className="bg-card border-0 shadow-corporate hover:shadow-primary transition-all duration-300 h-full">
+                      <CardContent className="p-6">
+                        <div className="flex items-start">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <info.icon className="w-6 h-6 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
+                            <p className="text-primary font-medium mb-1">{info.content}</p>
+                            <p className="text-sm text-muted-foreground">{info.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CardComponent>
+                );
+              })}
 
               {/* Quick Response Promise */}
               <Card className="bg-gradient-primary text-white border-0">
