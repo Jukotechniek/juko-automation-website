@@ -54,26 +54,32 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Use environment variable or fallback to direct URL
-      const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL || 
-        'https://n8n.jukotechniek.nl/webhook/32b9149b-7b61-4353-b33a-1514a0e00a0c';
+      const payload = {
+        ...formData,
+        timestamp: new Date().toISOString(),
+        source: 'website-contact-form'
+      };
 
-      const response = await fetch(webhookUrl, {
+      console.log('Sending to webhook:', payload);
+
+      const response = await fetch('https://n8n.jukotechniek.nl/webhook-test/b201fa1f-6fda-450a-9ee6-2e29c2a617fb', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          source: 'website-contact-form'
-        })
+        body: JSON.stringify(payload)
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+
       if (response.ok) {
+        const responseText = await response.text();
+        console.log('Response body:', responseText);
+        
         toast({
           title: "Bericht verzonden!",
-          description: "Dank je wel voor je bericht. We nemen zo snel mogelijk contact met je op.",
+          description: `Dank je wel voor je bericht. We nemen zo snel mogelijk contact met je op. (Status: ${response.status})`,
         });
         
         // Reset form on success
@@ -86,13 +92,15 @@ const Contact = () => {
           message: ""
         });
       } else {
-        throw new Error(`HTTP ${response.status}`);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
         title: "Er ging iets mis",
-        description: "Het bericht kon niet worden verzonden. Probeer het opnieuw of neem direct contact op.",
+        description: `Het bericht kon niet worden verzonden. Error: ${error.message}. Probeer het opnieuw of neem direct contact op.`,
         variant: "destructive",
       });
     } finally {
