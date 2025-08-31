@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "Diensten", path: "/diensten" },
     { name: "Over Ons", path: "/over-ons" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contact#contact-form" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -45,7 +45,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button variant="hero" size="default" asChild>
-              <Link to="/contact">Neem Contact Op</Link>
+              <Link to="/contact#contact-form">Neem Contact Op</Link>
             </Button>
           </div>
 
@@ -81,7 +81,7 @@ const Navigation = () => {
               ))}
               <div className="px-3 py-2">
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Link to="/contact#contact-form" onClick={() => setIsOpen(false)}>
                     Neem Contact Op
                   </Link>
                 </Button>
