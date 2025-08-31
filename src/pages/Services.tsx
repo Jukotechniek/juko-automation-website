@@ -95,7 +95,7 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-50 relative overflow-hidden border-b-2 border-primary">
+      <section className="py-20 bg-gradient-to-b from-gray-200 to-white relative overflow-hidden border-b-2 border-primary">
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             {/* Icon */}
