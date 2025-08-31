@@ -59,11 +59,10 @@ const About = () => {
               <Users className="w-12 h-12 text-primary" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-              Over <span className="text-primary">Juko Automation</span>
+              Over <span className="text-primary">Ons</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">
-              Uw partner in digitale transformatie en bedrijfsautomatisering. 
-              Wij combineren innovatie met efficiëntie om uw bedrijf naar een hoger niveau te tillen.
+            Uw partner in digitale vernieuwing. Wij combineren expertise in automatisering, software en AI om uw organisatie klaar te maken voor de toekomst.
             </p>
             {/* Gradient line */}
             <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
@@ -110,35 +109,49 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <TrendingUp className="w-16 h-16 mx-auto mb-6 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Onze <span className="text-primary">Waarden</span>
+              Waarom <span className="text-primary">Juko Automation</span>?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deze kernwaarden vormen de basis van alles wat we doen en begeleiden ons 
-              in elke beslissing en elk project.
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Bij Juko Automation draait het om echte samenwerking. We komen bij u op locatie 
+              of via videocall om uw processen te begrijpen en samen met u de beste oplossingen 
+              te bedenken. Geen standaard antwoorden, maar maatwerk dat echt werkt.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="group hover:shadow-primary transition-all duration-300 transform hover:-translate-y-2 bg-card border-0 shadow-corporate">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Snelle Implementatie</h3>
+                <p className="text-muted-foreground">Van idee naar werkende oplossing in weken, niet maanden</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Denken Met U Mee</h3>
+                <p className="text-muted-foreground">Niet alleen uitvoeren, maar ook adviseren en optimaliseren</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lightbulb className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Praktische Oplossingen</h3>
+                <p className="text-muted-foreground">De juiste balans tussen slimme techniek en eenvoud, zodat het écht werkt in de praktijk.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Echte Resultaten</h3>
+                <p className="text-muted-foreground">Tevreden klanten die tijd en geld besparen door onze oplossingen</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -168,42 +181,35 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Values */}
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <TrendingUp className="w-16 h-16 mx-auto mb-6 text-primary" />
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Waarom <span className="text-primary">Juko Automation</span>?
+              Onze <span className="text-primary">Waarden</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Bij Juko Automation draait het om echte samenwerking. We komen bij u op locatie 
-              of via videocall om uw processen te begrijpen en samen met u de beste oplossingen 
-              te bedenken. Geen standaard antwoorden, maar maatwerk dat echt werkt.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Deze kernwaarden vormen de basis van alles wat we doen en begeleiden ons 
+              in elke beslissing en elk project.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Snelle Implementatie</h3>
-                <p className="text-muted-foreground">Van idee naar werkende oplossing in weken, niet maanden</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Denken Met U Mee</h3>
-                <p className="text-muted-foreground">Niet alleen uitvoeren, maar ook adviseren en optimaliseren</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Echte Resultaten</h3>
-                <p className="text-muted-foreground">Tevreden klanten die tijd en geld besparen door onze oplossingen</p>
-              </div>
-            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <Card key={index} className="group hover:shadow-primary transition-all duration-300 transform hover:-translate-y-2 bg-card border-0 shadow-corporate">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {value.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

@@ -61,7 +61,7 @@ const Services = () => {
       title: "No-Code Tools",
       description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
-      imageDescription: "n8n workflow die klanten automatischbenadert via email",
+      imageDescription: "n8n workflow die klanten automatisch benadert via email",
       features: [
         "n8n-automatiseringen",
         "Make.com workflows",
@@ -109,8 +109,7 @@ const Services = () => {
               Onze <span className="text-primary">Diensten</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-600">
-              Ontdek hoe wij uw bedrijf kunnen helpen groeien met innovatieve 
-              technologische oplossingen en slimme automatiseringen.
+            Wij ontwikkelen slimme software en automatiseringen die processen versnellen, kosten besparen en bedrijven laten groeien.
             </p>
             {/* Gradient line */}
             <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
