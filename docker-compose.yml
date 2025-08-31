@@ -1,1 +1,11 @@
+version: "3.8"
+
+services:
+  jukoautomation_website:
+    build: .
+    image: jukoautomation-website:latest
+    container_name: jukoautomation-website
+    restart: unless-stopped
+    ports:
+      - "8082:8080"   # Nginx in de container draait op 8080
 
