@@ -328,7 +328,7 @@ const Contact = () => {
                 },
                 {
                   question: "Wat kost een gemiddeld project??",
-                  answer: "De kosten verschillen per project, maar we werken altijd transparant met duidelijke prijsafspraken.."
+                  answer: "De kosten verschillen per project, maar we werken altijd transparant met duidelijke prijsafspraken."
                 },
                 {
                   question: "Kunnen jullie bestaande systemen integreren?",
