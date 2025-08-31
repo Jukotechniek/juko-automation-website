@@ -327,8 +327,8 @@ const Contact = () => {
                   answer: "Ja, wij bieden verschillende ondersteuningspakketten voor na de oplevering."
                 },
                 {
-                  question: "Werken jullie met kleine bedrijven?",
-                  answer: "Absoluut! Wij werken met bedrijven van alle groottes, van startups tot enterprises."
+                  question: "Wat kost een gemiddeld project??",
+                  answer: "De kosten verschillen per project, maar we werken altijd transparant met duidelijke prijsafspraken.."
                 },
                 {
                   question: "Kunnen jullie bestaande systemen integreren?",
