@@ -182,7 +182,7 @@ const Services = () => {
                   </div>
 
                   <Button variant="hero" size="lg" asChild>
-                    <Link to="/contact">
+                    <Link to="/contact#contact-form">
                       Meer Informatie
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -206,7 +206,7 @@ const Services = () => {
               Neem contact met ons op en ontdek hoe wij uw bedrijf kunnen helpen groeien.
             </p>
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 Neem Contact Op
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

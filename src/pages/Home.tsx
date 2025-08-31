@@ -14,21 +14,21 @@ const Home = () => {
       title: "Automatiseringen & Software",
       description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties.",
       image: automationImage,
-      link: "/diensten#automatiseringen-software"
+      link: "/contact#contact-form"
     },
     {
       icon: Zap,
       title: "No-Code Tools",
       description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make zonder complexe programmering.",
       image: noCodeImage,
-      link: "/diensten#no-code-tools"
+      link: "/contact#contact-form"
     },
     {
       icon: Brain,
       title: "AI Implementatie",
       description: "Transformeer uw bedrijf met chatbots, predictive analytics en document processing.",
       image: jukoBotImage,
-      link: "/diensten#ai-implementatie"
+      link: "/contact#contact-form"
     },
   ];
 
@@ -60,7 +60,7 @@ const Home = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200" asChild>
-                <Link to="/contact">
+                <Link to="/contact#contact-form">
                   Neem Contact Op
                 </Link>
               </Button>
@@ -181,7 +181,7 @@ const Home = () => {
 
             <div className="text-center mt-12">
               <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
-                <Link to="/contact">
+                <Link to="/contact#contact-form">
                   Plan een Kennismaking
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -204,7 +204,7 @@ const Home = () => {
               en slimme automatiseringen. Neem vandaag nog contact op voor een vrijblijvend gesprek.
             </p>
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 Start Uw Transformatie
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
