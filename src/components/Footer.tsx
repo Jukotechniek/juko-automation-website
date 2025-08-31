@@ -9,9 +9,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/jukoautomation.PNG" 
+                src="/Jukoautomation_Wit.png" 
                 alt="Juko Automation" 
-                className="h-20 w-auto logo-footer"
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">

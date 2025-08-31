@@ -116,11 +116,7 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
-  /* Logo styling for footer - better visibility on dark background */
-  .logo-footer {
-    filter: brightness(1.2) contrast(1.1);
-  }
+
 }
 
 @keyframes fadeIn {

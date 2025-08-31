@@ -95,8 +95,10 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4">
+      <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-200 relative overflow-hidden">
+        {/* Subtle red accent */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Onze <span className="text-primary">Diensten</span>
