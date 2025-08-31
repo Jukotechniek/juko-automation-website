@@ -53,22 +53,51 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Use environment variable or fallback to direct URL
+      const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL || 
+        'https://n8n.jukotechniek.nl/webhook/32b9149b-7b61-4353-b33a-1514a0e00a0c';
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: 'website-contact-form'
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Bericht verzonden!",
+          description: "Dank je wel voor je bericht. We nemen zo snel mogelijk contact met je op.",
+        });
+        
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        throw new Error(`HTTP ${response.status}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
-        title: "Bericht verzonden!",
-        description: "Dank je wel voor je bericht. We nemen zo snel mogelijk contact met je op.",
+        title: "Er ging iets mis",
+        description: "Het bericht kon niet worden verzonden. Probeer het opnieuw of neem direct contact op.",
+        variant: "destructive",
       });
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
