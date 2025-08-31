@@ -37,12 +37,7 @@ const About = () => {
     }
   ];
 
-  const stats = [
-    { number: "50+", label: "Tevreden Klanten" },
-    { number: "100+", label: "Projecten Voltooid" },
-    { number: "5+", label: "Jaar Ervaring" },
-    { number: "24/7", label: "Support" }
-  ];
+
 
   const expertise = [
     "Modern Software Development",
@@ -148,33 +143,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 bg-foreground text-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Onze <span className="text-primary">Resultaten</span>
-            </h2>
-            <p className="text-xl text-gray-300">
-              Cijfers die onze toewijding en expertise bewijzen
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-6xl font-bold text-primary mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-lg text-gray-300">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Expertise */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -241,7 +209,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-foreground text-background">
+      <section className="py-20 bg-gradient-to-b from-gray-700 to-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
