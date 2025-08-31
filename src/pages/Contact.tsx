@@ -87,21 +87,21 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent"></div>
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-transparent"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/20 rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full mb-6">
               <MessageSquare className="w-10 h-10 text-primary" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Neem <span className="text-primary">Contact</span> Op
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
               Klaar om uw bedrijf te transformeren? Laten we een vrijblijvend gesprek inplannen 
               om uw uitdagingen en mogelijkheden te bespreken.
             </p>
