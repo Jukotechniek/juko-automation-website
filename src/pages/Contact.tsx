@@ -87,16 +87,27 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-hero text-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 to-transparent"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/20 rounded-full mb-6">
+              <MessageSquare className="w-10 h-10 text-primary" />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Neem <span className="text-primary">Contact</span> Op
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
               Klaar om uw bedrijf te transformeren? Laten we een vrijblijvend gesprek inplannen 
               om uw uitdagingen en mogelijkheden te bespreken.
             </p>
+            <div className="flex justify-center">
+              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -298,12 +309,12 @@ const Contact = () => {
                   answer: "Ja, wij zijn gespecialiseerd in het integreren van nieuwe oplossingen met bestaande systemen."
                 }
               ].map((faq, index) => (
-                <Card key={index} className="bg-card border-0 shadow-corporate">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-primary">{faq.question}</h3>
-                    <p className="text-muted-foreground">{faq.answer}</p>
-                  </CardContent>
-                </Card>
+                 <Card key={index} className="bg-card border-0 shadow-corporate hover:shadow-primary transition-all duration-300 group">
+                   <CardContent className="p-6">
+                     <h3 className="text-lg font-semibold mb-3 text-primary group-hover:text-primary/80 transition-colors">{faq.question}</h3>
+                     <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                   </CardContent>
+                 </Card>
               ))}
             </div>
           </div>
@@ -321,10 +332,10 @@ const Contact = () => {
               Laten we uw ideeën omzetten in werkelijke oplossingen. 
               Neem vandaag nog contact op voor een vrijblijvend gesprek.
             </p>
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
-              Scroll naar Formulier
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+             <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+               Scroll naar Formulier
+               <ArrowRight className="ml-2 h-5 w-5" />
+             </Button>
           </div>
         </div>
       </section>
