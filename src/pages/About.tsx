@@ -27,7 +27,7 @@ const About = () => {
     },
     {
       icon: Users,
-      title: "Partnership",
+      title: "Samenwerking",
       description: "Wij geloven in langdurige samenwerkingen en bouwen aan sterke relaties met onze klanten."
     },
     {
@@ -40,12 +40,12 @@ const About = () => {
 
 
   const expertise = [
-    "Modern Software Development",
-    "Process Automation",
-    "AI & Machine Learning",
-    "No-Code/Low-Code Solutions",
-    "Cloud Architecture",
-    "Digital Transformation"
+    "Web applicaties & Maatwerk software",
+    "Proces automatiseringen", 
+    "n8n & Make.com workflows",
+    "AI Chatbots & Virtuele assistenten",
+    "Data inzichtelijk maken",
+    "Software koppelingen"
   ];
 
   return (
@@ -84,9 +84,9 @@ const About = () => {
                   <h2 className="text-3xl font-bold">Onze Missie</h2>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Wij helpen bedrijven hun digitale potentieel te realiseren door het ontwikkelen van 
-                  innovatieve softwareoplossingen en het automatiseren van bedrijfsprocessen. 
-                  Ons doel is om complexe uitdagingen om te zetten in eenvoudige, efficiënte oplossingen.
+                  Wij maken uw werk makkelijker door slimme automatiseringen en praktische software. 
+                  Waar u nu nog handmatig bezig bent, zorgen wij ervoor dat het automatisch gaat. 
+                  Meer tijd voor wat echt belangrijk is in uw bedrijf.
                 </p>
               </CardContent>
             </Card>
@@ -100,9 +100,9 @@ const About = () => {
                   <h2 className="text-3xl font-bold">Onze Visie</h2>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Wij streven naar een wereld waarin elke organisatie, ongeacht grootte, 
-                  toegang heeft tot geavanceerde automatisering en AI-technologieën. 
-                  Door democratisering van technologie helpen we bedrijven concurrerend te blijven.
+                  Ook kleinere bedrijven verdienen toegang tot slimme technologie. 
+                  Wij zorgen ervoor dat automatisering en AI niet alleen voor grote bedrijven zijn, 
+                  maar voor iedereen die zijn processen wil verbeteren en tijd wil besparen.
                 </p>
               </CardContent>
             </Card>
@@ -177,31 +177,31 @@ const About = () => {
               Waarom <span className="text-primary">Juko Automation</span>?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Wij onderscheiden ons door onze unieke combinatie van technische expertise, 
-              strategisch inzicht en persoonlijke betrokkenheid. Elk project behandelen we 
-              als een kans om echte waarde toe te voegen aan uw bedrijf.
+              Bij Juko Automation draait het om echte samenwerking. We komen bij u op locatie 
+              of via videocall om uw processen te begrijpen en samen met u de beste oplossingen 
+              te bedenken. Geen standaard antwoorden, maar maatwerk dat echt werkt.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Snelle Resultaten</h3>
-                <p className="text-muted-foreground">Efficiënte implementatie met directe impact</p>
+                <h3 className="text-xl font-bold mb-2">Snelle Implementatie</h3>
+                <p className="text-muted-foreground">Van idee naar werkende oplossing in weken, niet maanden</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Persoonlijke Aanpak</h3>
-                <p className="text-muted-foreground">Maatwerk oplossingen voor uw specifieke behoeften</p>
+                <h3 className="text-xl font-bold mb-2">Denken Met U Mee</h3>
+                <p className="text-muted-foreground">Niet alleen uitvoeren, maar ook adviseren en optimaliseren</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Bewezen Track Record</h3>
-                <p className="text-muted-foreground">Succesvolle projecten bij diverse organisaties</p>
+                <h3 className="text-xl font-bold mb-2">Echte Resultaten</h3>
+                <p className="text-muted-foreground">Tevreden klanten die tijd en geld besparen door onze oplossingen</p>
               </div>
             </div>
           </div>

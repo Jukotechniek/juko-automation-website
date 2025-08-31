@@ -42,6 +42,7 @@ const Services = () => {
       title: "Automatiseringen & Software",
       description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties die tijd en kosten besparen.",
       image: automationImage,
+      imageDescription: "Moderne werkplek met geautomatiseerde workflows en efficiënte processen",
       features: [
         "Web applicaties",
         "Processen stroomlijnen",
@@ -58,8 +59,9 @@ const Services = () => {
     {
       icon: Zap,
       title: "No-Code Tools",
-      description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make voor directe resultaten zonder complexe programmering.",
+      description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
+      imageDescription: "Visuele workflow editor met drag-and-drop automatiseringen",
       features: [
         "n8n-automatiseringen",
         "Make.com workflows",
@@ -75,8 +77,9 @@ const Services = () => {
     {
       icon: Brain,
       title: "AI Implementatie",
-      description: "Transformeer uw bedrijf met de kracht van kunstmatige intelligentie",
+      description: "Slimme AI-toepassingen die direct resultaat opleveren. Van virtuele assistenten tot data-analyse: verhoog efficiëntie en creëer nieuwe kansen voor uw organisatie.",
       image: jukoBotImage,
+      imageDescription: "Intelligente chatbot die vragen van monteurs beantwoord en elektrische schema's kan doorsturen",
       features: [
         "Chatbots & Virtuele assistenten",
         "Voorspellende analytics", 
@@ -138,6 +141,9 @@ const Services = () => {
                           : 'object-cover'
                       } rounded-lg shadow-corporate`}
                     />
+                    <p className="text-sm text-gray-500 mt-3 text-center italic">
+                      {service.imageDescription}
+                    </p>
                   </div>
                 </div>
                 

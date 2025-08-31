@@ -18,15 +18,15 @@ const Home = () => {
     },
     {
       icon: Zap,
-      title: "No-Code Tools",
-      description: "Snelle ontwikkeling van zakelijke oplossingen met n8n en Make zonder complexe programmering.",
+      title: "No-Code Automatiseringen",
+      description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
       link: "/contact#contact-form"
     },
     {
       icon: Brain,
       title: "AI Implementatie",
-      description: "Transformeer uw bedrijf met chatbots, predictive analytics en document processing.",
+      description: "Transformeer uw bedrijf met data gedreven chatbots, voorspellende analyse en document verwerking.",
       image: jukoBotImage,
       link: "/contact#contact-form"
     },
@@ -82,7 +82,7 @@ const Home = () => {
               Onze <span className="text-primary">Expertise</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Van automatiseringen tot geavanceerde AI implementatie - 
+              Van automatiseringen tot geavanceerde AI implementatie,
               wij helpen uw bedrijf groeien met de juiste technologische oplossingen.
             </p>
           </div>
