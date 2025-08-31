@@ -56,22 +56,28 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-50 relative overflow-hidden border-b-2 border-primary">
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            {/* Icon */}
+            <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Users className="w-12 h-12 text-primary" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Over <span className="text-primary">Juko Automation</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-600">
               Uw partner in digitale transformatie en bedrijfsautomatisering. 
               Wij combineren innovatie met efficiëntie om uw bedrijf naar een hoger niveau te tillen.
             </p>
+            {/* Gradient line */}
+            <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="bg-card border-0 shadow-corporate">

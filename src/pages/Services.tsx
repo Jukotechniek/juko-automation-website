@@ -95,11 +95,13 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-b border-gray-200 relative overflow-hidden">
-        {/* Subtle red accent */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-50 relative overflow-hidden border-b-2 border-primary">
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Icon */}
+            <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Cog className="w-12 h-12 text-primary" />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Onze <span className="text-primary">Diensten</span>
             </h1>
@@ -107,12 +109,14 @@ const Services = () => {
               Ontdek hoe wij uw bedrijf kunnen helpen groeien met innovatieve 
               technologische oplossingen en slimme automatiseringen.
             </p>
+            {/* Gradient line */}
+            <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
           </div>
         </div>
       </section>
 
       {/* Main Services */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {mainServices.map((service, index) => (

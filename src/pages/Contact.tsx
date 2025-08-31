@@ -87,22 +87,28 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-50 relative overflow-hidden border-b-2 border-primary">
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            {/* Icon */}
+            <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MessageSquare className="w-12 h-12 text-primary" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               Neem <span className="text-primary">Contact</span> Op
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-600">
               Klaar om uw bedrijf te transformeren? Laten we een vrijblijvend gesprek inplannen 
               om uw uitdagingen en mogelijkheden te bespreken.
             </p>
+            {/* Gradient line */}
+            <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
           </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}

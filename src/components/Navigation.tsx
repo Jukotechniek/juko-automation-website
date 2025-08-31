@@ -17,7 +17,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-gray-50/50 to-white backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-base font-medium transition-colors hover:text-primary ${
                   isActive(item.path)
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -44,7 +44,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="hero" size="default" asChild>
               <Link to="/contact">Neem Contact Op</Link>
             </Button>
           </div>
@@ -69,7 +69,7 @@ const Navigation = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
+                  className={`block px-3 py-2 text-lg font-medium transition-colors hover:text-primary ${
                     isActive(item.path)
                       ? "text-primary"
                       : "text-muted-foreground"
@@ -80,7 +80,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="hero" size="sm" className="w-full" asChild>
+                <Button variant="hero" size="default" className="w-full" asChild>
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Neem Contact Op
                   </Link>
