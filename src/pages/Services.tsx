@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { 
   Code, 
   Cog, 
@@ -23,9 +24,11 @@ import n8nLogo from "@/assets/n8n-logo.png";
 import makeLogo from "@/assets/make-logo.png";
 
 const Services = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    // Handle hash navigation when component mounts
-    const hash = window.location.hash;
+    // Handle hash navigation when component mounts or location changes
+    const hash = location.hash;
     if (hash) {
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
@@ -34,30 +37,7 @@ const Services = () => {
         }
       }, 100);
     }
-  }, []);
-
-  useEffect(() => {
-    // Handle hash navigation when hash changes (when already on the page)
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        setTimeout(() => {
-          const element = document.getElementById(hash.substring(1));
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
-      }
-    };
-
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
+  }, [location]);
 
   const mainServices = [
     {
