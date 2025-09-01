@@ -14,21 +14,21 @@ const Home = () => {
       title: "Automatiseringen & Software",
       description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties.",
       image: automationImage,
-      link: "/diensten"
+      link: "/diensten#automatiseringen-software"
     },
     {
       icon: Zap,
       title: "No-Code Automatiseringen",
       description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
-      link: "/diensten"
+      link: "/diensten#no-code-tools"
     },
     {
       icon: Brain,
       title: "AI Implementatie",
       description: "Transformeer uw bedrijf met data gedreven chatbots, voorspellende analyse en document verwerking.",
       image: jukoBotImage,
-      link: "/diensten"
+      link: "/diensten#ai-implementatie"
     },
   ];
 
