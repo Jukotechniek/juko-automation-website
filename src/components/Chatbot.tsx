@@ -92,14 +92,14 @@ const Chatbot = () => {
               <img
                 src="/justin.png"
                 alt="Justin"
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
               />
               <div>
-                <div className="text-base font-semibold text-black">Justin</div>
-                <div className="text-sm text-black block mt-1 leading-[1.4]">
+                <div className="text-sm md:text-base font-semibold text-black">Justin</div>
+                <div className="text-xs md:text-sm text-black block mt-1 leading-[1.4]">
                   van <span className="font-semibold">Juko Automation</span>
                 </div>
-                <div className="text-sm text-black block mt-1 leading-[1.4]">
+                <div className="text-xs md:text-sm text-black block mt-1 leading-[1.4]">
                   {getGreeting()}
                   <br />
                   Heb je een vraag? Ik help je graag verder via:
@@ -111,14 +111,14 @@ const Chatbot = () => {
             <div className="grid grid-cols-2 gap-[10px] justify-center">
               <button
                 onClick={handleEmail}
-                className="bg-white border border-black rounded-[999px] py-[14px] px-[26px] font-medium text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-[0.2s] text-center whitespace-nowrap w-full hover:bg-[#8e8e8e]"
+                className="bg-white border border-black rounded-[999px] py-[10px] md:py-[14px] px-[20px] md:px-[26px] font-medium text-sm md:text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-[0.2s] text-center whitespace-nowrap w-full hover:bg-[#8e8e8e]"
               >
                 E-mail
               </button>
               
               <button
                 onClick={handleWhatsApp}
-                className="border-none rounded-[999px] py-[14px] px-[26px] font-medium text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-all duration-200 text-center whitespace-nowrap w-full text-white"
+                className="border-none rounded-[999px] py-[10px] md:py-[14px] px-[20px] md:px-[26px] font-medium text-sm md:text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-all duration-200 text-center whitespace-nowrap w-full text-white"
                 style={{ background: "#20c997" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "#1aa179";
@@ -132,7 +132,7 @@ const Chatbot = () => {
               
               <button
                 onClick={handlePhone}
-                className="col-span-2 justify-self-center w-1/2 bg-white border border-black rounded-[999px] py-[14px] px-[26px] font-medium text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-[0.2s] text-center whitespace-nowrap hover:bg-[#8e8e8e]"
+                className="col-span-2 justify-self-center w-1/2 bg-white border border-black rounded-[999px] py-[10px] md:py-[14px] px-[20px] md:px-[26px] font-medium text-sm md:text-base cursor-pointer shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-[0.2s] text-center whitespace-nowrap hover:bg-[#8e8e8e]"
               >
                 Bellen
               </button>

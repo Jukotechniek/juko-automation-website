@@ -73,7 +73,7 @@ const Footer = () => {
                 <img 
                   src="/Jukoautomation_Wit.png" 
                   alt="Juko Automation" 
-                  className="h-12 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
               <p className="text-sm text-gray-400">
