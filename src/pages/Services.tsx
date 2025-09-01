@@ -36,6 +36,29 @@ const Services = () => {
     }
   }, []);
 
+  useEffect(() => {
+    // Handle hash navigation when hash changes (when already on the page)
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   const mainServices = [
     {
       icon: Cog,
