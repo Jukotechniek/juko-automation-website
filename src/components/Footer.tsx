@@ -9,13 +9,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              <img 
-                src="/Jukoautomation_Wit.png" 
-                alt="Juko Automation" 
-                className="h-20 w-auto"
-              />
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -79,6 +72,15 @@ const Footer = () => {
                 © 2024 Juko Automation. Alle rechten voorbehouden.
               </p>
             </div>
+          </div>
+          
+          {/* Logo at the very bottom */}
+          <div className="mt-8 flex justify-center">
+            <img 
+              src="/Jukoautomation_Wit.png" 
+              alt="Juko Automation" 
+              className="h-16 w-auto"
+            />
           </div>
         </div>
       </div>
