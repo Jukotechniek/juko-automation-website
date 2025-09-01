@@ -43,16 +43,24 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Diensten</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-300">Softwareontwikkeling</span>
+                <Link to="/diensten#automatiseringen-software" className="text-gray-300 hover:text-primary transition-colors">
+                  Softwareontwikkeling
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">Automatiseringen</span>
+                <Link to="/diensten#automatiseringen-software" className="text-gray-300 hover:text-primary transition-colors">
+                  Automatiseringen
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">No-Code Tools</span>
+                <Link to="/diensten#no-code-tools" className="text-gray-300 hover:text-primary transition-colors">
+                  No-Code Tools
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">AI Implementatie</span>
+                <Link to="/diensten#ai-implementatie" className="text-gray-300 hover:text-primary transition-colors">
+                  AI Implementatie
+                </Link>
               </li>
             </ul>
           </div>
