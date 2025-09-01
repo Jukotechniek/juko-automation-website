@@ -68,19 +68,18 @@ const Footer = () => {
               </p>
             </div>
             <div className="text-right">
+              {/* Logo above copyright */}
+              <div className="flex justify-end mb-4">
+                <img 
+                  src="/Jukoautomation_Wit.png" 
+                  alt="Juko Automation" 
+                  className="h-12 w-auto"
+                />
+              </div>
               <p className="text-sm text-gray-400">
-                © 2024 Juko Automation. Alle rechten voorbehouden.
+                © 2025 Juko Automation. Alle rechten voorbehouden.
               </p>
             </div>
-          </div>
-          
-          {/* Logo at the very bottom */}
-          <div className="mt-8 flex justify-center">
-            <img 
-              src="/Jukoautomation_Wit.png" 
-              alt="Juko Automation" 
-              className="h-16 w-auto"
-            />
           </div>
         </div>
       </div>
