@@ -19,38 +19,6 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-gray-50/50 to-white backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        {/* Mobile Navigation - Above Logo */}
-        <div className="md:hidden">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex-1"></div>
-            <div className="flex items-center space-x-4">
-              {navItems.slice(0, 2).map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.path)
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <div className="flex-1 flex justify-end">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Logo and Desktop Navigation */}
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -81,8 +49,8 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile menu button - Hidden on mobile since it's now above */}
-          <div className="hidden">
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -93,7 +61,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation - Full Menu */}
+        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">

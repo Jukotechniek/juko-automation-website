@@ -16,13 +16,6 @@ const Footer = () => {
                 className="h-20 w-auto"
               />
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Expert in softwareontwikkeling, automatiseringen, no-code tools en AI implementatie 
-              voor verhoogde bedrijfsefficiëntie.
-            </p>
-            <p className="text-sm text-gray-400">
-              © 2024 Juko Automation. Alle rechten voorbehouden.
-            </p>
           </div>
 
           {/* Quick Links */}
@@ -69,6 +62,23 @@ const Footer = () => {
                 <span className="text-gray-300">AI Implementatie</span>
               </li>
             </ul>
+          </div>
+        </div>
+        
+        {/* Bottom section with copyright and expertise */}
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-gray-300 mb-2">
+                Expert in softwareontwikkeling, automatiseringen, no-code tools en AI implementatie 
+                voor verhoogde bedrijfsefficiëntie.
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-sm text-gray-400">
+                © 2024 Juko Automation. Alle rechten voorbehouden.
+              </p>
+            </div>
           </div>
         </div>
       </div>
