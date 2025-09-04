@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+      <section className="relative min-h-screen sm:min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden py-16 sm:py-0">
         <div className="absolute inset-0 bg-black/50"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
@@ -44,22 +44,22 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Innovatieve <span className="text-primary">Automatiseringen</span><br />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+              Innovatieve <span className="text-primary">Automatisering</span><br />
               voor Uw Bedrijf
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto px-2">
               Verhoog uw bedrijfsefficiëntie met onze expertise in automatiseringen, 
               no-code tools en AI implementatie.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-2">
+              <Button variant="hero" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto" asChild>
                 <Link to="/diensten">
                   Ontdek Onze Oplossingen
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200" asChild>
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200 w-full sm:w-auto" asChild>
                 <Link to="/contact#contact-form">
                   Neem Contact Op
                 </Link>
@@ -69,9 +69,9 @@ const Home = () => {
         </div>
         
         {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float"></div>
-        <div className="absolute bottom-32 right-16 w-16 h-16 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-8 w-12 h-12 bg-primary/25 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 bg-primary/20 rounded-full animate-float"></div>
+        <div className="absolute bottom-32 right-4 sm:right-16 w-10 h-10 sm:w-16 sm:h-16 bg-primary/30 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-2 sm:right-8 w-8 h-8 sm:w-12 sm:h-12 bg-primary/25 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       </section>
 
       {/* Services Preview */}
