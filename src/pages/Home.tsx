@@ -44,7 +44,7 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
               Innovatieve <span className="text-primary">Automatisering</span><br />
               voor Uw Bedrijf
             </h1>
@@ -53,13 +53,13 @@ const Home = () => {
               no-code tools en AI implementatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-2">
-              <Button variant="hero" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto" asChild>
+              <Button variant="hero" size="default" className="text-sm sm:text-base px-5 sm:px-6 py-2 sm:py-3 w-full sm:w-auto" asChild>
                 <Link to="/diensten">
                   Ontdek Onze Oplossingen
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200 w-full sm:w-auto" asChild>
+              <Button variant="outline" size="default" className="text-sm sm:text-base px-5 sm:px-6 py-2 sm:py-3 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200 w-full sm:w-auto" asChild>
                 <Link to="/contact#contact-form">
                   Neem Contact Op
                 </Link>
