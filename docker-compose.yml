@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   jukoautomation_website:
     build: .
@@ -7,9 +5,9 @@ services:
     container_name: jukoautomation-website
     restart: unless-stopped
     ports:
-      - "8082:80"   # Host 8082 → Container 80 (Nginx luistert hierop)
+      - "8082:80"
     healthcheck:
-       test: ["CMD", "curl", "-fsS", "http://localhost/"]
+      test: ["CMD", "curl", "-fsS", "http://localhost/"]
       interval: 30s
       timeout: 5s
       retries: 5
