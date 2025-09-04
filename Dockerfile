@@ -9,18 +9,17 @@ RUN npm run build
 # ---- Runtime (nginx) ----
 FROM nginx:stable-alpine
 
-# Optioneel: default conf weghalen
+# Tools voor healthcheck
+RUN apk add --no-cache curl
+
+# (optioneel) default conf weghalen
 RUN rm -f /etc/nginx/conf.d/default.conf
 
-# Jouw SPA-config kopiëren (maakt fallback naar /index.html)
+# Jouw SPA-config + build
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Static files
 COPY --from=build /app/dist/ /usr/share/nginx/html/
 
-# Nginx luistert op 80; EXPOSE is informatief
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
 
 
