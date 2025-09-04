@@ -62,7 +62,7 @@ const Contact = () => {
 
       console.log('Sending to webhook:', payload);
 
-      const response = await fetch('https://n8n.jukotechniek.nl/webhook-test/b201fa1f-6fda-450a-9ee6-2e29c2a617fb', {
+      const response = await fetch('https://n8n.jukotechniek.nl/webhook/9146874b-5160-4c94-9bb9-a507effe89ec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
