@@ -19,9 +19,10 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/ /usr/share/nginx/html/
 
 # Nginx luistert op 80; EXPOSE is informatief
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
+
 
 
 
