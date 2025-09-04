@@ -59,7 +59,7 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200 w-full sm:w-auto" asChild>
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-black hover:bg-white hover:text-black hover:scale-105 transition-transform duration-200 w-full sm:w-auto" asChild>
                 <Link to="/contact#contact-form">
                   Neem Contact Op
                 </Link>
