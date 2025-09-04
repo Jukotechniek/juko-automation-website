@@ -89,8 +89,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Link key={index} to={service.link} className="block">
-                <Card className="group hover:shadow-primary transition-all duration-300 transform hover:-translate-y-2 bg-card border-0 shadow-corporate cursor-pointer">
+              <Link key={index} to={service.link} className="block group">
+                <Card className="group-hover:shadow-primary transition-all duration-300 transform group-hover:-translate-y-2 bg-card border-0 shadow-corporate cursor-pointer active:scale-95 hover:border-primary/20 border-2 border-transparent">
                   <CardContent className="p-8">
                     <div className="mb-6 relative overflow-hidden rounded-lg">
                       <img 
@@ -111,9 +111,14 @@ const Home = () => {
                     <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
                       {service.description}
                     </p>
+                    {/* Klik tekst indicator */}
+                    <div className="flex items-center text-primary font-medium text-sm">
+                      <span>Meer informatie</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
