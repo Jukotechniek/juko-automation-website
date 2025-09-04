@@ -73,14 +73,15 @@ const Contact = () => {
       console.log('Response status:', response.status);
       console.log('Response headers:', response.headers);
 
-      if (response.ok) {
-        const responseText = await response.text();
-        console.log('Response body:', responseText);
-        
-        toast({
-          title: "Bericht verzonden!",
-          description: `Dank je wel voor je bericht. We nemen zo snel mogelijk contact met je op. (Status: ${response.status})`,
-        });
+                 if (response.ok) {
+             const responseText = await response.text();
+             console.log('Response body:', responseText);
+
+             toast({
+               title: "✅ Bericht succesvol verzonden!",
+               description: "Bedankt voor uw bericht. We nemen binnen 24 uur contact met u op.",
+               className: "bg-green-50 border-green-200 text-green-800",
+             });
         
         // Reset form on success
         setFormData({
@@ -99,9 +100,10 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
-        title: "Er ging iets mis",
-        description: `Het bericht kon niet worden verzonden. Error: ${error.message}. Probeer het opnieuw of neem direct contact op.`,
+        title: "❌ Er ging iets mis",
+        description: "Het bericht kon niet worden verzonden. Probeer het opnieuw of neem direct contact op via telefoon.",
         variant: "destructive",
+        className: "bg-red-50 border-red-200 text-red-800",
       });
     } finally {
       setIsSubmitting(false);
