@@ -45,7 +45,7 @@ const Services = () => {
       title: "Automatiseringen & Software",
       description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties die tijd en kosten besparen.",
       image: automationImage,
-      imageDescription: "Webapp voor bedrijf waar projecten en uren van monteurs in beheerd worden",
+      imageDescription: "Webapp waar projecten en uren van monteurs in beheerd worden",
       features: [
         "Web applicaties",
         "Processen stroomlijnen",
@@ -140,7 +140,7 @@ const Services = () => {
                           ? 'object-contain bg-gray-50' 
                           : service.title === 'Automatiseringen & Software'
                           ? 'object-contain bg-white p-4'
-                          : 'object-cover'
+                          : 'object-contain bg-gray-50 sm:object-cover'
                       } rounded-lg shadow-corporate`}
                     />
                     <p className="text-sm text-gray-500 mt-3 text-center italic">
