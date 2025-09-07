@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Chatbot from "./Chatbot";
+import CookieBanner from "./CookieBanner";
 
 interface LayoutProps {
   children: ReactNode;
@@ -26,6 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
       <Footer />
       <Chatbot />
+      <CookieBanner />
     </div>
   );
 };
