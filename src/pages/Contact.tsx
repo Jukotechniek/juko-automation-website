@@ -120,7 +120,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefoon",
-      content: "+31 (0)6 12345678",
+      content: "+31 6 22035459",
       description: "Bel ons voor direct contact"
     },
     {
@@ -226,7 +226,7 @@ const Contact = () => {
                           id="phone"
                           name="phone"
                           type="tel"
-                          placeholder="+31 6 12345678"
+                          placeholder="+31 6 22035459"
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="transition-all duration-300 focus:shadow-primary"
