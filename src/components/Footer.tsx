@@ -54,7 +54,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/diensten#no-code-tools" className="text-gray-300 hover:text-primary transition-colors">
-                  No-Code Tools
+                    Low-Code Tools
                 </Link>
               </li>
               <li>

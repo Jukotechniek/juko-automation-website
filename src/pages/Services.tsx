@@ -61,7 +61,7 @@ const Services = () => {
     },
     {
       icon: Zap,
-      title: "No-Code Tools",
+      title: "Low-Code Tools",
       description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
       imageDescription: "n8n workflow die klanten automatisch benadert via email",

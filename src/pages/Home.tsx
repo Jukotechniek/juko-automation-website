@@ -18,7 +18,7 @@ const Home = () => {
     },
     {
       icon: Zap,
-      title: "No-Code Automatiseringen",
+      title: "Low-Code Automatiseringen",
       description: "Snelle ontwikkeling van werkende visuele automatiseringen met n8n en Make, zonder complexe programmering.",
       image: noCodeImage,
       link: "/diensten#no-code-tools"
@@ -50,7 +50,7 @@ const Home = () => {
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto px-2">
               Verhoog uw bedrijfsefficiëntie met onze expertise in automatiseringen, 
-              no-code tools en AI implementatie.
+              low-code tools en AI implementatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-2">
               <Button variant="hero" size="lg" className="text-sm sm:text-lg px-5 sm:px-8 py-2 sm:py-4 w-full sm:w-auto" asChild>
