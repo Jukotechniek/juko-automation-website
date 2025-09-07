@@ -226,7 +226,7 @@ const Contact = () => {
                           id="phone"
                           name="phone"
                           type="tel"
-                          placeholder="+31 6 22035459"
+                          placeholder="+31 6 12345678"
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="transition-all duration-300 focus:shadow-primary"
