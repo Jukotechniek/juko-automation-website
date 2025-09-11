@@ -17,16 +17,15 @@ const CookieBanner = () => {
   }, [analyticsAccepted]);
 
   const initializeGoogleAnalytics = () => {
-    // Hardcoded Google Analytics ID - vervang met je eigen ID
-    const measurementId = 'G-4QSG8LRWMG'; // Vervang dit met je echte Google Analytics ID
+    // Hardcoded Google Analytics ID
+    const measurementId = 'G-4QSG8LRWMG';
 
-    // Add Google Analytics script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
+    // Check if Google Analytics is already loaded
+    if (document.querySelector(`script[src*="gtag/js?id=${measurementId}"]`)) {
+      return;
+    }
 
-    // Initialize gtag
+    // Initialize gtag first
     window.gtag = window.gtag || function() {
       (window.gtag as any).q = (window.gtag as any).q || [];
       (window.gtag as any).q.push(arguments);
@@ -35,8 +34,22 @@ const CookieBanner = () => {
     window.gtag('js', new Date());
     window.gtag('config', measurementId, {
       anonymize_ip: true,
-      cookie_flags: 'SameSite=None;Secure'
+      cookie_flags: 'SameSite=None;Secure',
+      send_page_view: true,
+      debug_mode: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     });
+
+    // Add Google Analytics script after gtag is initialized
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    
+    // Add error handling
+    script.onerror = () => {
+      console.error('Failed to load Google Analytics script');
+    };
+    
+    document.head.appendChild(script);
   };
 
   const handleAccept = () => {
@@ -47,8 +60,13 @@ const CookieBanner = () => {
     declineAnalytics();
   };
 
-  if (isLoading || hasConsent) {
-    return null;
+  // Show banner if no consent has been given yet
+  if (isLoading) {
+    return null; // Still loading
+  }
+  
+  if (hasConsent) {
+    return null; // User has already made a choice
   }
 
   return (

@@ -18,7 +18,7 @@ export const trackEvent = (action: string, category: string, label?: string, val
 
 export const trackPageView = (page_path: string, page_title?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', import.meta.env.VITE_GA_MEASUREMENT_ID, {
+    window.gtag('config', 'G-4QSG8LRWMG', {
       page_path,
       page_title
     });

@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Chatbot from "./Chatbot";
 import CookieBanner from "./CookieBanner";
+import { trackPageView } from "@/lib/analytics";
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,6 +17,13 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+
+  // Track page views for Google Analytics
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      trackPageView(location.pathname, document.title);
     }
   }, [location.pathname]);
 
