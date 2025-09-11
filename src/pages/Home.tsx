@@ -52,14 +52,14 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight text-center">
               <div className="flex flex-col items-center">
                 <div>Innovatieve</div>
                 <div className="text-primary min-h-[1.2em] flex items-center justify-center">{rotatingWord}</div>
                 <div>voor Uw Bedrijf</div>
               </div>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto px-2">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto px-2">
             Verhoog de efficiëntie van uw bedrijf en bespaar tijd. <br /> Wij helpen u met slimme automatiseringen, low-code tools en AI-oplossingen 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-2">
@@ -88,10 +88,10 @@ const Home = () => {
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Onze <span className="text-primary">Expertise</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Van automatiseringen tot geavanceerde AI implementatie,
               wij helpen uw bedrijf groeien met de juiste technologische oplossingen.
             </p>
@@ -151,10 +151,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                 Onze <span className="text-primary">Werkwijze</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Een persoonlijke aanpak waarbij we samen uw processen doorlopen en op maat gemaakte automatiseringsvoorstellen ontwikkelen.
               </p>
             </div>
@@ -211,10 +211,10 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <Brain className="w-16 h-16 mx-auto mb-6 text-primary" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Klaar voor de <span className="text-primary">Toekomst</span>?
             </h2>
-            <p className="text-lg mb-8 text-gray-300">
+            <p className="text-xl mb-8 text-gray-300">
               Laat ons uw bedrijfsprocessen transformeren met innovatieve technologie 
               en slimme automatiseringen. Neem vandaag nog contact op voor een vrijblijvend gesprek.
             </p>
