@@ -22,6 +22,7 @@
     <meta property="twitter:description" content="Expert in softwareontwikkeling, automatiseringen, low-code tools en AI implementatie voor verhoogde bedrijfsefficiëntie." />
     
     <!-- Favicon - Dynamic based on color scheme -->
+    <link rel="icon" type="image/x-icon" href="/favicon_zwart.ico" id="favicon-ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_zwart.png" id="favicon-16" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_zwart.png" id="favicon-32" />
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon_zwart.png" id="favicon-48" />
@@ -34,15 +35,17 @@
     <script>
       function updateFavicon() {
         const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const faviconPath = isDark ? '/favicon_wit.png' : '/favicon_zwart.png';
+        const faviconPath = isDark ? '/favicon_wit' : '/favicon_zwart';
+        const timestamp = new Date().getTime(); // Cache busting
         
-        document.getElementById('favicon-16').href = faviconPath;
-        document.getElementById('favicon-32').href = faviconPath;
-        document.getElementById('favicon-48').href = faviconPath;
-        document.getElementById('favicon-64').href = faviconPath;
-        document.getElementById('favicon-96').href = faviconPath;
-        document.getElementById('favicon-128').href = faviconPath;
-        document.getElementById('favicon-apple').href = faviconPath;
+        document.getElementById('favicon-ico').href = `${faviconPath}.ico?v=${timestamp}`;
+        document.getElementById('favicon-16').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-32').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-48').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-64').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-96').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-128').href = `${faviconPath}.png?v=${timestamp}`;
+        document.getElementById('favicon-apple').href = `${faviconPath}.png?v=${timestamp}`;
       }
       
       // Update favicon on page load
