@@ -23,7 +23,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/jukoautomation.png" 
+              src="/jukoautomationv2.png" 
               alt="Juko Automation" 
               className="h-16 w-auto"
             />

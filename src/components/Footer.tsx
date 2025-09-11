@@ -79,7 +79,7 @@ const Footer = () => {
               {/* Logo above copyright */}
               <div className="flex justify-end mb-4">
                 <img 
-                  src="/Jukoautomation_Wit.png" 
+                  src="/jukoautomationv2_wit.png" 
                   alt="Juko Automation" 
                   className="h-20 w-auto"
                 />
