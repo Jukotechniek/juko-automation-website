@@ -71,7 +71,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-gray-300 mb-2">
-                Expert in softwareontwikkeling, automatiseringen, no-code tools en AI implementatie 
+                Expert in softwareontwikkeling, automatiseringen, low-code tools en AI implementatie 
                 voor verhoogde bedrijfsefficiëntie.
               </p>
             </div>

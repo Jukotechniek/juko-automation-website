@@ -118,9 +118,7 @@ const About = () => {
               Waarom <span className="text-primary">Juko Automation</span>?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Bij Juko Automation draait het om echte samenwerking. We komen bij u op locatie 
-              of via videocall om uw processen te begrijpen en samen met u de beste oplossingen 
-              te bedenken. Geen standaard antwoorden, maar maatwerk dat echt werkt.
+            Bij Juko Automation draait alles om samenwerking. We komen bij u op locatie of plannen een videocall om uw processen goed te begrijpen. Zo bedenken we samen oplossingen op maat die écht werken.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               <div className="text-center">
@@ -219,7 +217,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Klaar voor <span className="text-primary">Samenwerking</span>?
+            Meer uit uw bedrijf <span className="text-primary">halen</span>?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
               Laten we kennismaken en ontdekken hoe wij uw bedrijf kunnen helpen groeien 

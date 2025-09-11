@@ -207,7 +207,7 @@ const Services = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Laten we <span className="text-primary">Samenwerken</span>
+            Klaar om tijd te <span className="text-primary">besparen</span>?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
               Heeft u vragen over onze diensten of wilt u een vrijblijvend gesprek? 
