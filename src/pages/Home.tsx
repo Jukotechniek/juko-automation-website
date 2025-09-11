@@ -6,8 +6,16 @@ import heroImage from "@/assets/hero-image.jpg";
 import automationImage from "@/assets/automation.jpg";
 import noCodeImage from "@/assets/no-code-tools.jpg";
 import jukoBotImage from "@/assets/JukoBot.png";
+import { useRotatingTypewriter } from "@/hooks/useTypewriter";
 
 const Home = () => {
+  const { displayText: rotatingWord } = useRotatingTypewriter({ 
+    baseText: "{word}",
+    rotatingWords: ["Automatisering", "Low-Code Tools", "AI Implementatie", "Software"],
+    speed: 100,
+    rotationInterval: 2000
+  });
+
   const services = [
     {
       icon: Cog,
@@ -44,9 +52,12 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
-              Innovatieve <span className="text-primary">Automatiseringen</span><br />
-              voor Uw Bedrijf
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight text-center">
+              <div className="flex flex-col items-center">
+                <div>Innovatieve</div>
+                <div className="text-primary min-h-[1.2em] flex items-center justify-center">{rotatingWord}</div>
+                <div>voor Uw Bedrijf</div>
+              </div>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto px-2">
               Verhoog uw bedrijfsefficiëntie met onze expertise in automatiseringen, 
