@@ -198,7 +198,7 @@ const Contact = () => {
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="uw.email@example.com"
+                          placeholder="uw.email@voorbeeld.com"
                           value={formData.email}
                           onChange={handleInputChange}
                           required
@@ -394,7 +394,7 @@ const Contact = () => {
               Klaar om te <span className="text-primary">Starten</span>?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
-              Laten we uw ideeën omzetten in werkelijke oplossingen. 
+              Laten we uw ideeën omzetten in werkende oplossingen. 
               Neem vandaag nog contact op voor een vrijblijvend gesprek.
             </p>
             <Button variant="hero" size="lg" className="text-lg px-8 py-4" asChild>
