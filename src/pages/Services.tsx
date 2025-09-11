@@ -43,7 +43,7 @@ const Services = () => {
     {
       icon: Cog,
       title: "Automatiseringen & Software",
-      description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties die tijd en kosten besparen.",
+      description: "Stroomlijn uw processen met slimme automatiseringen en maatwerk web applicaties die tijd en kosten besparen.",
       image: automationImage,
       imageDescription: "Webapp waar projecten en uren van monteurs in beheerd worden",
       features: [

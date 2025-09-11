@@ -20,7 +20,7 @@ const Home = () => {
     {
       icon: Cog,
       title: "Automatiseringen & Software",
-      description: "Stroomlijn uw workflows met slimme automatiseringen en maatwerk web applicaties.",
+      description: "Stroomlijn uw processen met slimme automatiseringen en maatwerk web applicaties.",
       image: automationImage,
       link: "/diensten#automatiseringen-software"
     },
