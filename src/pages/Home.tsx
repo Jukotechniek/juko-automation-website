@@ -11,7 +11,7 @@ import { useRotatingTypewriter } from "@/hooks/useTypewriter";
 const Home = () => {
   const { displayText: rotatingWord } = useRotatingTypewriter({ 
     baseText: "{word}",
-    rotatingWords: ["Automatisering", "Low-Code Tools", "AI Implementatie", "Software"],
+    rotatingWords: ["Automatiseringen", "Low-Code Tools", "AI Implementatie", "Software"],
     speed: 100,
     rotationInterval: 2000
   });
