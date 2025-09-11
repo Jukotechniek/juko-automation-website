@@ -21,11 +21,36 @@
     <meta property="twitter:title" content="Juko Automation - Softwareontwikkeling & Automatiseringen" />
     <meta property="twitter:description" content="Expert in softwareontwikkeling, automatiseringen, low-code tools en AI implementatie voor verhoogde bedrijfsefficiëntie." />
     
-    <!-- Favicon - Universal (works for both light and dark themes) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <!-- Favicon - Dynamic based on color scheme -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_zwart.png" id="favicon-16" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_zwart.png" id="favicon-32" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon_zwart.png" id="favicon-48" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon_zwart.png" id="favicon-64" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon_zwart.png" id="favicon-96" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon_zwart.png" id="favicon-128" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_zwart.png" id="favicon-apple" />
+    
+    <!-- Script to handle dynamic favicon switching -->
+    <script>
+      function updateFavicon() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const faviconPath = isDark ? '/favicon_wit.png' : '/favicon_zwart.png';
+        
+        document.getElementById('favicon-16').href = faviconPath;
+        document.getElementById('favicon-32').href = faviconPath;
+        document.getElementById('favicon-48').href = faviconPath;
+        document.getElementById('favicon-64').href = faviconPath;
+        document.getElementById('favicon-96').href = faviconPath;
+        document.getElementById('favicon-128').href = faviconPath;
+        document.getElementById('favicon-apple').href = faviconPath;
+      }
+      
+      // Update favicon on page load
+      updateFavicon();
+      
+      // Listen for changes in color scheme preference
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
